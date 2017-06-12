@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--<script src="script.js"></script>
+    <!--<script src="array.js"></script>-->
+    <!--<script src="funcexsercise.js"></script>-->
+    <!--<script>
+        document.getElementById("submit").onclick = function enter() {
+            alert("hello checking onclick event");
+
+        }
+    </script>-->
+    <style>
+        .box {
+            height: 100px;
+            background: red;
+            width: 100px
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Hello Plunker!</h1>
+    <fieldset>
+        <legend>USER INFORMATION</legend>
+        USERNAME:
+        <input id="name"> </input><br> Email:
+        <input id="email"> </input>
+        <br>
+
+        <button id="submit">LOGIN</button>
+
+        <div id='boxcolor' class='box'></div>
+
+
+    </fieldset>
+    <script>
+        function call(e) {
+            console.log(e);
+        }
+
+        var submitBtn = document.getElementById("submit");
+        //function(e) is an event calling function 
+        submitBtn.onclick = function(e) {
+            var x = document.getElementById("name").value;
+            var y = document.getElementById("email").value;
+            if (x == "" && y == "") {
+                alert("Please Enter User Name and Email")
+            } else if (x !== "" && y == "") {
+                alert("Please Enter Email")
+            } else if (x == "" && y !== "") {
+                alert("Please Enter User Name")
+
+            } else {
+                alert("Thank you for your patience")
+            }
+        };
+        var colorchange = document.getElementById("boxcolor");
+        colorchange.onmouseover = function(e) {
+            colorchange.style.background = "blue";
+        }
+        colorchange.onmouseleave = function(e) {
+            colorchange.style.background = "red"
+        }
+    </script>
+</body>
+
+</html>
